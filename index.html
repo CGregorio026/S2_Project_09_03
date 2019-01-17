@@ -81,9 +81,14 @@
                 Select the CSS style values from the form below and preview the effect on the sample text in the
                 preview box.
             </p>
+            <!-- fieldset 1 -->
             <fieldset>
                 <legend>Fonts</legend>
+                <!-- fontfamily -->
                 <label for="fontfamily">Font Family</label>
+                <!-- 
+                    This creates a selection list with different options for the viewer to choose from. The option groups make a translucent text that is not selectable that explains what the options below it are.
+                 -->
                 <select name="fontfamily" id="fontfamily">
                     <optgroup label="Generic">
                         <option value="default">default</option>
@@ -103,7 +108,114 @@
                         <option value="Tahoma">Tahoma</option>
                         <option value="'Times New Roman'">'Times New Roman'</option>
                 </select>
+                <!-- end fontfamily -->
+                <!-- fontstyle -->
+                <label for="fontstyle">Font Style</label>
+                <select name="fontstyle" id="fontstyle">
+                    <option value="normal">normal</option>
+                    <option value="italic">italic</option>
+                    <option value="oblique">oblique</option>
+                </select>
+                <!-- end fontstyle -->
+                <!-- fontweight -->
+                <label for="fontweight">Font Weight</label>
+                <select name="fontweight" id="fontweight">
+                    <option value="normal">normal</option>
+                    <option value="bold">bold</option>
+                </select>
+                <!-- end fontweight -->
+                <!-- textdecoration -->
+                <label for="textdecoration">
+                    Text Decoration
+                </label>
+                <select name="textdecoration" id="textdecoration">
+                    <option value="none">none</option>
+                    <option value="line-through">line-through</option>
+                    <option value="overline">overline</option>
+                    <option value="underline">underline</option>
+                </select>
+                <!-- end textdecoration -->
+                <!-- texttransform -->
+                <label for="texttransform">Text Transform</label>
+                <select name="texttransform" id="texttransform">
+                    <option value="none">none</option>
+                    <option value="capitalize">capitalize</option>
+                    <option value="lowercase">lowercase</option>
+                    <option value="uppercase">uppercase</option>
+                </select>
+                <!-- end texttransform -->
+                <!-- fontvariant -->
+                <label for="fontvariant">Font Variant</label>
+                <select name="fontvariant" id="fontvariant">
+                    <option value="normal">normal</option>
+                    <option value="small-caps">small-caps</option>
+                </select>
+                <!-- end fontvariant -->
             </fieldset>
+            <!-- end fieldset 1 -->
+            <!-- fieldset 2 -->
+            <fieldset>
+                <legend>Colors</legend>
+                <label for="color">Font Color (hexadecimal)</label>
+                <!-- 
+                    This type is relatively new to the website, but it allows information to be entered in as a color, instead of as words with text or with certain forms such as tel or email. The default is set to black, or #000000.
+                 -->
+                <input type="color" name="color" id="color" value="#000000">
+                <label for="backgroundcolor">Background Color (hexadecimal)</label>
+                <!-- 
+                    This value is set to white, but the placeholder tells the user that the information should be entered with 6 characters.
+                 -->
+                <input type="color" name="backgroundcolor" id="backgroundcolor" placeholder="#rrggbb" value="#FFFFFF">
+            </fieldset>
+            <!-- end fieldset 2 -->
+            <!-- fieldset 3 -->
+            <fieldset>
+                <legend>Sizes</legend>
+                <label for="fontsize">Font Size (px)</label>
+                <!-- 
+                    This allows any range slider to be affected by the same styles. It also displays everything inside as a block element.
+                 -->
+                <div class="slider">
+                    <!-- 
+                        Oh boy. Where to begin. Outside of the input, the numbers 8 and 40 are to allow the user to know the sizes go from 8 to 40 pixels, specified in the input as a min and max value of 8 and 40 respectively.
+
+                        The type is range, which makes the control a slider. You can slide through the values starting at 14(The default value) at 1 pixel each slide, specified by the 1 step.
+                     -->
+                    8
+                    <input type="range" name="fontsize" id="fontsize" min="8" max="40" step="1" value="14">
+                    40
+                </div>
+
+                <label for="letterspacing">Letter Spacing (px)</label>
+                <div class="slider">
+                    0
+                    <input type="range" name="letterspacing" id="letterspacing" min="0" max="10" step="1" value="0">
+                    10
+                </div>
+
+                <label for="wordspacing">Word Spacing (px)</label>
+                <div class="slider">
+                    0
+                    <input type="range" name="wordspacing" id="wordspacing" min="0" max="10" step="1" value="0">
+                    10
+                </div>
+
+                <label for="lineheight">Line Height (em)</label>
+                <div class="slider">
+                    0
+                    <input type="range" name="lineheight" id="lineheight" min="0" max="4" step="0.2" value="1">
+                    4
+                </div>
+
+                <label for="textindent">Text Indent (px)</label>
+                <div class="slider">
+                    0
+                    <input type="range" name="textindent" id="textindent" min="0" max="10" step="1" value="0">
+                    10
+                </div>
+
+            </fieldset>
+            <!-- end fieldset 3 -->
         </form>
 
 
